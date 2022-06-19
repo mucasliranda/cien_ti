@@ -34,7 +34,7 @@ export default function Result({data}){
 
 export async function getStaticProps(){
 
-  const res = await fetch("https://cienti-datascience.vercel.app/api/chartData")
+  const res = await fetch("http://localhost:3000/api/chartData")
   const data = await res.json()
 
 
