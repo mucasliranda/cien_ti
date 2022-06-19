@@ -25,23 +25,23 @@ export default function Result({data}){
 
       <Typography variant="h2" mt="25px" >Confira os resultados!</Typography>
 
-      {/* {data && <BarChart dataChart={data.result.wifi} />} */}
+      {data && <BarChart dataChart={data.result.wifi} />}
 
     </Stack>
   )
 
 }
 
-// export async function getStaticProps(){
+export async function getStaticProps(){
 
-//   const res = await fetch("http://localhost:3000/api/chartData")
-//   const data = await res.json()
+  const res = await fetch("https://cienti-datascience.vercel.app/api/chartData")
+  const data = await res.json()
 
 
-//   return{
-//     props: { 
-//       data,
-//     }
-//   }
+  return{
+    props: { 
+      data,
+    }
+  }
 
-// }
+}
