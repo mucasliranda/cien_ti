@@ -1,17 +1,47 @@
 import { Stack, Typography } from "@mui/material"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import TopBar from "../components/TopBar"
+import axios from "axios"
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import BarChart from "../components/BarChart"
 
 
-export default function Result(){
+export default function Result({data}){
+
+  // console.log(data.result)
+
+  // const catalogue = 
+
+  // for (const i in data.result){
+  //   console.log(i)
+  // }
+  
 
   return(
-    <Stack alignItems="center" justifyContent="center" sx={{width: "100vw", height: "100vh", position: "relative"}} >
-      <TopBar />
-      <h1>resultt</h1>
-      <Typography variant="h3" >Muito obrigado por colaborar com a nossa pesquisa!</Typography>
-      <Typography variant="h3" >Confira os resultados!</Typography>
+    <Stack alignItems="center" justifyContent="center" sx={{width: "100vw", height: "100vh"}} >
+      
+      <Typography variant="h3" textAlign="center" >Obrigado por colaborar com a nossa pesquisa!</Typography>
+
+      <Typography variant="h2" mt="25px" >Confira os resultados!</Typography>
+
+      {data && <BarChart dataChart={data.result.wifi} />}
+
     </Stack>
   )
+
+}
+
+export async function getStaticProps(){
+
+  const res = await fetch("https://cienti-datascience.vercel.app/api/chartData")
+  const data = await res.json()
+
+
+  return{
+    props: { 
+      data,
+    }
+  }
 
 }

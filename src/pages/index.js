@@ -1,6 +1,5 @@
-import { Box, TextField, Autocomplete, Stack, Button } from '@mui/material'
+import { Box, TextField, Autocomplete, Stack, Button, Typography, CardMedia } from '@mui/material'
 import { Fade } from 'react-reveal'
-
 
 
 export default function Home() {
@@ -14,19 +13,17 @@ export default function Home() {
   return (
     <Stack alignItems="center" justifyContent="center" sx={{width: "100vw", height: "100vh"}} >
 
-      <Fade top big >
+      {/* <CardMedia
+        component="img"
+        image="/_next/static/media/LogoMostraCinzaEscuroFT.db3c0c65.png"
+        sx={{ width: "clamp(0px, 75%, 350px)"}}
+      /> */}
 
-        <Stack justifyContent="center" spacing={5} >
+      <Typography variant="h2" >Pesquisa</Typography>
 
-          <TextField label="Qual o seu nome?" />
+      <Typography variant="h1" >CienTI</Typography>
 
-          <Autocomplete options={cursos} sx={{width:"300px"}} renderInput={(params) => <TextField {...params} label="Qual o seu curso?" />} />
-
-          <Button variant="contained" >enviar</Button>
-
-        </Stack>
-
-      </Fade>
+      <Typography>Demora menos de 3 minutos</Typography>
 
     </Stack>
   )

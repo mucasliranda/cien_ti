@@ -2,13 +2,19 @@ import { Tabs, Tab, Box } from "@mui/material";
 import { useState } from "react";
 
 
-export default function TopBar(){
+export default function TopBar({data}){
 
   const [ value, setValue ] = useState(0)
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const names = Object.keys(data[0])
+
+  names.shift()
+
+  console.log(names)
 
   return(
     <Tabs
@@ -28,14 +34,9 @@ export default function TopBar(){
         }
       }}
     >
-      <Tab label="aaaa" />
-      <Tab label="aaaa" />
-      <Tab label="aaaa" />
-      <Tab label="aaaa" />
-      <Tab label="aaaa" />
-      <Tab label="aaaa" />
-      <Tab label="aaaa" />
-      <Tab label="aaaa" />
+      {/* {names.map( (each) => {
+        return <Tab label={each} />
+      })} */}
     </Tabs>
   )
 
