@@ -16,7 +16,7 @@
     "@mui/material": "^5.8.3",
     "@mui/styles": "^5.8.3",
     "@mui/system": "^5.8.4",
-    "@nivo/bar": "^0.79.1",
+    "@nivo/bar": "^0.78.0",
     "@nivo/core": "^0.78.0",
     "axios": "^0.27.2",
     "mongodb": "^4.7.0",
