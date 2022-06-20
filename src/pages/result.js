@@ -7,9 +7,9 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import BarChart from "../components/BarChart"
 
 
-export default function Result(){
+export default function Result({data}){
 
-  // console.log(data.date)
+  console.log(data.date)
 
   return(
     <Stack alignItems="center" justifyContent="center" sx={{width: "100vw", minHeight: "100vh", position: "relative", backgroundColor: "background.paper"}} >
@@ -28,7 +28,7 @@ export default function Result(){
 
       <Typography variant="h2" mt="25px" >Confira os resultados!</Typography>
 
-      {/* <Typography variant="h3" mt="35px" mb="-15px" textAlign="center" >{data.result.assinc.label}</Typography>
+      <Typography variant="h3" mt="35px" mb="-15px" textAlign="center" >{data.result.assinc.label}</Typography>
 
       {data && <BarChart dataChart={data.result.assinc.data} />}
 
@@ -42,25 +42,23 @@ export default function Result(){
 
       <Typography variant="h3" mt="35px" mb="-15px" textAlign="center" >{data.result.wifi.label}</Typography>
 
-      {data && <BarChart dataChart={data.result.wifi.data} />} */}
+      {data && <BarChart dataChart={data.result.wifi.data} />}
 
     </Stack>
   )
 
 }
 
-// export async function getStaticProps(){
+export async function getStaticProps(){
 
-//   const res = await fetch("http://localhost:3000/api/chartData")
-//   const data = await res.json()
+  const res = await fetch("https://cienti-datascience.vercel.app/api/chartData")
+  const data = await res.json()
 
-//   const date = new Date()
+  return{
+    props: { 
+      data,
+    },
+    revalidate: 30
+  }
 
-//   return{
-//     props: { 
-//       data,
-//     },
-//     revalidate: 30
-//   }
-
-// }
+}
