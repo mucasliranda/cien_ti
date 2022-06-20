@@ -1,14 +1,37 @@
 import { ResponsiveBar } from '@nivo/bar'
 import { Box } from '@mui/material'
-import { useIndexBy } from '../../provider/IndexBy'
 
 
 export default function BarChart({dataChart}){
 
-  const { FindIndex } = useIndexBy()
+  const theme = {
+    background: "#121212",
+    axis: {
+      fontSize: "14px",
+      tickColor: "#eee",
+      ticks: {
+        line: {
+          stroke: "#555555"
+        },
+        text: {
+          fill: "#E6E6E699"
+        }
+      },
+      legend: {
+        text: {
+          fill: "#E6E6E699"
+        }
+      }
+    },
+    grid: {
+      line: {
+        stroke: "#555555"
+      }
+    }
+  };
 
   return (
-    <Box sx={{width: "100%", maxHeight: "70vh"}} >
+    <Box sx={{width: "100%", height: "70vh"}} >
       <h1></h1>
       <ResponsiveBar
         data={dataChart}
@@ -31,6 +54,8 @@ export default function BarChart({dataChart}){
           legendPosition: "middle",
           legendOffset: -40,
         }}
+
+        theme={theme}
       />
     </Box>
   )

@@ -15,6 +15,17 @@ export default function Layout({children}){
       ...(darkMode
         ? {
           mode: "dark",
+          primary: {
+            main:  "#323232",
+            light: "#323232",
+            dark:  "#323232",
+          },
+          text: {
+            primary: "#E6E6E699"
+          },
+          background: {
+            paper: "#121212"
+          },
           }
         : {
           mode: "light",
@@ -22,49 +33,27 @@ export default function Layout({children}){
       ),
     },
 
-    typography: {
-      h1: {
-        fontWeight: 400
-      },
-      h2: {
-        fontWeight: 500,
-        fontSize: "36px",
-        color: "rgba(0,0,0,0.97)"
-      },
-      h3: {
-        fontWeight: 400,
-        fontSize: "28px",
-        color: "rgba(0,0,0,0.97)"
-      },
-    }
-
   })
 
-  // if(respostas.cor === "blue"){
-  //   theme.palette.primary = {
-  //     main: "#1976D2",
-  //     light: "#42A5F5",
-  //     dark: "#1565C0",
-  //     contrastText: "#fff"
-  //   }
-  // }
-
-  // else if(respostas.cor === "red"){
-  //   theme.palette.primary = {
-  //     main: "#f44336",
-  //     light: "#f6685e",
-  //     dark: "#aa2e25",
-  //     contrastText: "#fff"
-  //   }
-  // }
-  // else if(respostas.cor === "green"){
-  //   theme.palette.primary = {
-  //     main: "#4caf50",
-  //     light: "#6fbf73",
-  //     dark: "#357a38",
-  //     contrastText: "#fff"
-  //   }
-  // }
+  theme.typography = {
+    h1: {
+      fontWeight: 400
+    },
+    h2: {
+      fontWeight: 500,
+      fontSize: "36px",
+      color: theme.palette.text.primary
+    },
+    h3: {
+      fontWeight: 400,
+      fontSize: "28px",
+      color: theme.palette.text.primary
+    },
+    h5: {
+      fontWeight: 400,
+      fontSize: "1.125rem",
+    },
+  }
 
   return(
     <ThemeProvider theme={theme} >

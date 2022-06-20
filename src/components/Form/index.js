@@ -42,13 +42,13 @@ export default function Form({pergunta}){
   },[value])
 
   return(
-    <Stack component="form" onSubmit={handleSubmit} alignItems="center" justifyContent="center" sx={{width: "100vw", height: "100vh"}} >
+    <Stack component="form" onSubmit={handleSubmit} alignItems="center" justifyContent="center" sx={{width: "100vw", height: "100vh", backgroundColor: "background.paper"}} >
 
       <Slide direction="down" in={toFade} mountOnEnter unmountOnExit>
 
         <Stack alignItems="center" sx={{textAlign: "center", width: "clamp(320px, 100%, 720px)"}} >
 
-          <FormLabel>{label}</FormLabel>
+          <FormLabel sx={{marginBottom: "25px", fontSize: "1.5rem", fontWeight: "400", color: "#e6e6e699"}} >{label}</FormLabel>
 
           <FormControl>
 
@@ -59,7 +59,7 @@ export default function Form({pergunta}){
 
               <Stack direction="row" alignItems="center" justifyContent="space-between" spacing={1} >
 
-                <Typography sx={{color: "error.main", display: { xs: 'none', sm: 'block' } }} >
+                <Typography variant="h5" sx={{color: "error.main", display: { xs: 'none', sm: 'block' } }} >
                   Discordo completamente
                 </Typography>
 
@@ -68,11 +68,11 @@ export default function Form({pergunta}){
                 />
 
                 <FormControlLabel 
-                  control={<Radio value="-1" color="error" sx={{ color: "#ef5350 !important" ,'& .MuiSvgIcon-root': {fontSize: 36}}} />}
+                  control={<Radio value="-1" color="error" sx={{ color: "#ef5350 !important", '& .MuiSvgIcon-root': {fontSize: 36}}} />}
                 />
 
                 <FormControlLabel 
-                  control={<Radio value="0" sx={{color: "#9b9faa", '&.Mui-checked': {color: "rgba(0, 0, 0, 0.5)"},'& .MuiSvgIcon-root': {fontSize: 32}}} />}
+                  control={<Radio value="0" sx={{color: "#e6e6e699", '&.Mui-checked': {color: "rgba(0, 0, 0, 0.5)"},'& .MuiSvgIcon-root': {fontSize: 32}}} />}
                 />
 
                 <FormControlLabel 
@@ -83,7 +83,7 @@ export default function Form({pergunta}){
                   control={<Radio value="2" color="success" sx={{ color: "#33a474 !important" ,'& .MuiSvgIcon-root': {fontSize: 40}}} />}
                 />
 
-                <Typography sx={{color: "#33a474", display: { xs: 'none', sm: 'block' }}} >
+                <Typography variant="h5" sx={{color: "#33a474", display: { xs: 'none', sm: 'block' }}} >
                   Concordo completamente
                 </Typography>
 
@@ -91,11 +91,11 @@ export default function Form({pergunta}){
 
               <Stack direction="row" justifyContent="space-between" sx={{width: "100%", display: { xs: 'flex', sm: 'none' }}} >
 
-                <Typography sx={{color: "#ef5350", maxWidth: "180px"}} >
+                <Typography variant="h5" sx={{color: "#ef5350", maxWidth: "180px"}} >
                   Discordo completamente
                 </Typography>
 
-                <Typography sx={{color: "#33a474", maxWidth: "180px"}} >
+                <Typography variant="h5" sx={{color: "#33a474", maxWidth: "180px"}} >
                   Concordo completamente
                 </Typography>
 
