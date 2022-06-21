@@ -53,6 +53,11 @@ export default function Layout({children}){
       fontWeight: 400,
       fontSize: "1.125rem",
     },
+    h6: {
+      fontWeight: 400,
+      fontSize: "1.125rem",
+      color: theme.palette.text.primary   
+    }
   }
 
   theme.components = {

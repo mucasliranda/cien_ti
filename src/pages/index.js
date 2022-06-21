@@ -16,6 +16,8 @@ export default function Home() {
         <Button variant="contained" sx={{fontFamily: "Roboto", fontSize: "18px", padding: "8px 28px"}} >INICIAR</Button>
       </Link>
 
+      <Typography variant="h6" textAlign="center" >Evite deixar respostas no &quot;neutro&quot;</Typography>
+
     </Stack>
   )
 }

@@ -35,6 +35,18 @@ export default function Id(){
       id: 4, 
       label: "O wifi do campus atende as minhas necessidades",
       key: "wifi",
+      proximo: true
+    },
+    {
+      id: 5, 
+      label: "Os computadores do NAT atendem as minhas necessidades",
+      key: "pc",
+      proximo: true
+    },
+    {
+      id: 6, 
+      label: "Gosto da metodologia de ensino dos professores",
+      key: "profs",
       proximo: false
     },
   ]
