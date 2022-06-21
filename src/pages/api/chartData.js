@@ -151,7 +151,77 @@ export default async function handler(req, res) {
             color: "#33a474"
           },
         ],
-      } 
+      },
+      pc: {
+        label: "Os computadores do NAT atendem as minhas necessidades",
+        data: [
+          {
+            index: "-2",
+            key: 0,
+            show: "🡣🡣🡣",
+            color: "#ef5350"
+          },
+          {
+            index: "-1",
+            key: 0,
+            show: "🡣🡣",
+            color: "#ef5350bb"
+          },
+          {
+            index: "0",
+            key: 0,
+            show: "0",
+            color: "#cccccc"
+          },
+          {
+            index: "1",
+            key: 0,
+            show: "🡡🡡",
+            color: "#33a474bb"
+          },
+          {
+            index: "2",
+            key: 0,
+            show: "🡡🡡🡡",
+            color: "#33a474"
+          },
+        ],
+      },
+      profs: {
+        label: "Gosto da metodologia de ensino dos professores",
+        data: [
+          {
+            index: "-2",
+            key: 0,
+            show: "🡣🡣🡣",
+            color: "#ef5350"
+          },
+          {
+            index: "-1",
+            key: 0,
+            show: "🡣🡣",
+            color: "#ef5350bb"
+          },
+          {
+            index: "0",
+            key: 0,
+            show: "0",
+            color: "#cccccc"
+          },
+          {
+            index: "1",
+            key: 0,
+            show: "🡡🡡",
+            color: "#33a474bb"
+          },
+          {
+            index: "2",
+            key: 0,
+            show: "🡡🡡🡡",
+            color: "#33a474"
+          },
+        ],
+      }
     }
 
     data.forEach( (each) => {
