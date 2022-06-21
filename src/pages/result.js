@@ -12,7 +12,7 @@ export default function Result({data}){
   console.log(data.date)
 
   return(
-    <Stack alignItems="center" justifyContent="center" sx={{width: "100vw", minHeight: "100vh", position: "relative", backgroundColor: "background.paper"}} >
+    <Stack alignItems="center" justifyContent="center" sx={{width: "100vw", minHeight: "100vh", position: "relative", backgroundColor: "background.paper", padding: "15px"}} >
 
       {/* <Stack sx={{width: "100vw"}} >
 
@@ -30,19 +30,19 @@ export default function Result({data}){
 
       <Typography variant="h3" mt="35px" mb="-15px" textAlign="center" >{data.result.assinc.label}</Typography>
 
-      {data && <BarChart dataChart={data.result.assinc.data} />}
+      <BarChart dataChart={data.result.assinc.data} />
 
       <Typography variant="h3" mt="35px" mb="-15px" textAlign="center" >{data.result.mascara.label}</Typography>
 
-      {data && <BarChart dataChart={data.result.mascara.data} />}
+      <BarChart dataChart={data.result.mascara.data} />
 
       <Typography variant="h3" mt="35px" mb="-15px" textAlign="center" >{data.result.ava.label}</Typography>
 
-      {data && <BarChart dataChart={data.result.ava.data} />}
+      <BarChart dataChart={data.result.ava.data} />
 
       <Typography variant="h3" mt="35px" mb="-15px" textAlign="center" >{data.result.wifi.label}</Typography>
 
-      {data && <BarChart dataChart={data.result.wifi.data} />}
+      <BarChart dataChart={data.result.wifi.data} />
 
     </Stack>
   )

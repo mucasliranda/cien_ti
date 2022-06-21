@@ -21,7 +21,7 @@ export default function Layout({children}){
             dark:  "#323232",
           },
           text: {
-            primary: "#E6E6E699"
+            primary: "#DEDEDE"
           },
           background: {
             paper: "#121212"
@@ -53,6 +53,20 @@ export default function Layout({children}){
       fontWeight: 400,
       fontSize: "1.125rem",
     },
+  }
+
+  theme.components = {
+    MuiButton: {
+      variants: [
+        {
+          props: { variants: "initial" },
+          style: {
+            color: theme.palette.text.primary,
+            border: "1px solid black"
+          }
+        }
+      ]
+    }
   }
 
   return(

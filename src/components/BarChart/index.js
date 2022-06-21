@@ -31,7 +31,7 @@ export default function BarChart({dataChart}){
   };
 
   return (
-    <Box sx={{width: "100%", height: "70vh"}} >
+    <Box sx={{width: "95%", height: "70vh"}} >
       <h1></h1>
       <ResponsiveBar
         data={dataChart}

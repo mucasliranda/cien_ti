@@ -13,7 +13,7 @@ export default function Home() {
       <Typography variant="h2" >Ciência de dados</Typography>
 
       <Link href="/form/1" >
-        <Button variant="contained" >aaa</Button>
+        <Button variant="contained" sx={{fontFamily: "Roboto", fontSize: "18px", padding: "8px 28px"}} >INICIAR</Button>
       </Link>
 
     </Stack>
